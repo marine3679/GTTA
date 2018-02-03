@@ -1,44 +1,8 @@
 <div class="main-container" [class.is-mobile]="mobileQuery.matches">
-    <mat-toolbar color="primary" class="toolbar">
-        <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
-        <h1 class="app-name">The team name</h1>
-        <div class="search-box">
-            <input type="text" id="input" class="search-style" placeholder="Search">
-        </div>
-
-
-        <!-- <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button> -->
-
-
-    </mat-toolbar>
-
-    <!-- <div class="scrollbar" id="style-1">
-        <div class="force-overflow"></div>
-
-    </div> -->
-
+    <app-com-header></app-com-header>
     <mat-sidenav-container class="sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
-        <mat-sidenav class="custom-scroll sidenav-component" #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
-            <div class="sidenav-contents">
-                <mat-nav-list>
-                    <a mat-list-item routerLink="." *ngFor="let nav of fillerNav1">{{nav}}</a>
-                </mat-nav-list>
-            </div>
-            <div class="sidenav-contents">
-                <mat-nav-list>
-                    <a mat-list-item routerLink="." *ngFor="let nav of fillerNav2">{{nav}}</a>
-                </mat-nav-list>
-            </div>
-            <div class="sidenav-contents">
-                <mat-nav-list>
-                    <a mat-list-item routerLink="." *ngFor="let nav of fillerNav3">{{nav}}</a>
-                </mat-nav-list>
-            </div>
-        </mat-sidenav>
-
-        <mat-sidenav-content class="custom-scroll">
-            <p *ngFor="let content of fillerContent">{{content}}</p>
-        </mat-sidenav-content>
+        <app-com-navi></app-com-navi>
+        <app-main-contents></app-main-contents>
     </mat-sidenav-container>
 </div>
 

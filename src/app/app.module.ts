@@ -40,6 +40,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { CdkTableModule } from '@angular/cdk/table';
 
 import { AppComponent } from './app.component';
+import { ComNaviComponent } from './com-navi/com-navi.component';
+import { ComHeaderComponent } from './com-header/com-header.component';
+import { MainContentsComponent } from './main-contents/main-contents.component';
 
 @NgModule({
   exports: [
@@ -74,7 +77,7 @@ import { AppComponent } from './app.component';
     MatTableModule,
     MatTabsModule,
     MatToolbarModule,
-    MatTooltipModule,
+    MatTooltipModule
   ]
 })
 export class DemoMaterialModule { }
@@ -85,7 +88,10 @@ export class DemoMaterialModule { }
     AppComponent
   ],
   declarations: [
-    AppComponent
+    AppComponent,
+    ComNaviComponent,
+    ComHeaderComponent,
+    MainContentsComponent
   ],
   imports: [
     BrowserModule,

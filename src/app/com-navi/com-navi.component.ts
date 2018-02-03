@@ -1,15 +1,17 @@
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import {MediaMatcher} from '@angular/cdk/layout';
-import {ChangeDetectorRef, Component} from '@angular/core';
-
+import {ComHeaderComponent} from '../com-header/com-header.component';
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-com-navi',
+  templateUrl: './com-navi.component.html',
+  styleUrls: ['./com-navi.component.css']
 })
-export class AppComponent {
+export class ComNaviComponent implements OnInit {
   mobileQuery: MediaQueryList;
 
-  // fillerNav = Array(50).fill(0).map((_, i) => `Nav Itemzxcvzxcvzxcv ${i + 1}`);
+  fillerNav1 = [`Home`, `Recommend`];
+  fillerNav2 = [`My Team`];
+  fillerNav3 = [`Help`, `Opinion`, `Setup`, `Logout`];
 
   private _mobileQueryListener: () => void;
 
@@ -17,6 +19,9 @@ export class AppComponent {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
+  }
+
+  ngOnInit() {
   }
 
   ngOnDestroy(): void {
