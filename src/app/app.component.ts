@@ -10,6 +10,9 @@ export class AppComponent {
   mobileQuery: MediaQueryList;
 
   // fillerNav = Array(50).fill(0).map((_, i) => `Nav Itemzxcvzxcvzxcv ${i + 1}`);
+  fillerNav1 = [`Home`, `Recommend`];
+  fillerNav2 = [`My Team`];
+  fillerNav3 = [`Help`, `Opinion`, `Setup`, `Logout`];
 
   private _mobileQueryListener: () => void;
 

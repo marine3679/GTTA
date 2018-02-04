@@ -40,8 +40,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { CdkTableModule } from '@angular/cdk/table';
 
 import { AppComponent } from './app.component';
-import { ComNaviComponent } from './com-navi/com-navi.component';
-import { ComHeaderComponent } from './com-header/com-header.component';
 import { MainContentsComponent } from './main-contents/main-contents.component';
 
 @NgModule({
@@ -89,8 +87,6 @@ export class DemoMaterialModule { }
   ],
   declarations: [
     AppComponent,
-    ComNaviComponent,
-    ComHeaderComponent,
     MainContentsComponent
   ],
   imports: [
