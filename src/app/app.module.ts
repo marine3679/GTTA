@@ -41,6 +41,8 @@ import { CdkTableModule } from '@angular/cdk/table';
 
 import { AppComponent } from './app.component';
 import { MainContentsComponent } from './main-contents/main-contents.component';
+import { ComHeaderComponent } from './com-header/com-header.component';
+import { ComNaviComponent } from './com-navi/com-navi.component';
 
 @NgModule({
   exports: [
@@ -86,6 +88,8 @@ export class DemoMaterialModule { }
     AppComponent
   ],
   declarations: [
+    ComHeaderComponent,
+     ComNaviComponent,
     AppComponent,
     MainContentsComponent
   ],

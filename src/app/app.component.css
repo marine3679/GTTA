@@ -1,0 +1,6 @@
+app-com-header,
+app-com-navi,
+app-main-contents {
+    width: 100%;
+    display: inherit;
+}
