@@ -5,8 +5,17 @@
 </div>
 <div class="sidenav-contents">
     <mat-nav-list>
-        <a mat-list-item routerLink="." *ngFor="let nav of fillerNav2">
-            <div>{{nav}}</div>
+        <a mat-list-item id="myTeam" routerLink="." *ngFor="let nav of fillerNav2" (click)="myTeamClick($event)">
+            <div style="width:100%; display:inherit;">
+                <div style="width:95%;">{{nav}}</div>
+                <div><i id="icon" class="fas fa-angle-right fa-2x extend-icon"></i></div>
+            </div>
+        </a>
+        <a mat-list-item style="height: 50%; display:none;" id="myTeam1" name="group" routerLink="." *ngFor="let nav of fillerNav4" (click)="myTeamClick($event)">
+            <div style="padding-left:10%; width:100%; display:inherit;">
+                <div style="width:95%;">{{nav}}</div>
+                <div><i id="icon2" class="fas fa-angle-right extend-icon"></i></div>
+            </div>
         </a>
     </mat-nav-list>
 </div>

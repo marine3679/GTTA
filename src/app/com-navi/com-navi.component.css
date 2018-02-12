@@ -1,0 +1,21 @@
+.extend-icon {
+    /* -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    transition-duration: 0.4s; */
+    -webkit-transition: -webkit-transform 10s ease-out;
+    -moz-transition: -moz-transform 0.4s ease-out;
+    -o-transition: -o-transform 0.4s ease-out;
+    transition: transform 0.4s ease-out;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+    overflow: hidden;
+}
+
+.rotate-icon {
+    /* -moz-transform: rotate(90deg); */
+    -webkit-transform: rotate(90deg);
+    /* transform: rotate(90deg); */
+}
