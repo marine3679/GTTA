@@ -4,7 +4,7 @@ import $ from 'jquery';
 @Component({
   selector: 'app-com-navi',
   templateUrl: './com-navi.component.html',
-  styleUrls: ['./com-navi.component.scss']
+  styleUrls: ['./com-navi.component.css']
 })
 export class ComNaviComponent implements OnInit {
 
