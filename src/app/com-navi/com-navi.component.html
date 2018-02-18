@@ -5,18 +5,29 @@
 </div>
 <div class="sidenav-contents">
     <mat-nav-list>
-        <a mat-list-item id="myTeam" routerLink="." *ngFor="let nav of fillerNav2" (click)="myTeamClick($event)">
-            <div style="width:100%; display:inherit;">
-                <div style="width:95%;">{{nav}}</div>
-                <div><i id="icon" class="fas fa-angle-right fa-2x extend-icon"></i></div>
+        <div *ngFor="let firstNav of fillerNav2; let i = index">
+            <a mat-list-item id="myTeamFirst{{i}}" routerLink="." (click)="myTeamClick($event)">
+                <div style="width:100%; display:inherit;">
+                    <div style="width:95%;">{{firstNav[0]}}</div>
+                    <div><i id="icon" class="fas fa-angle-right fa-2x extend-icon"></i></div>
+                </div>
+            </a>
+            <div *ngFor="let secondNav of firstNav[1]; let j = index">
+                <a mat-list-item style="height: 60%; display:none;" id="myTeamSecond{{i}}-{{j}}" routerLink="." (click)="myTeamClick($event)">
+                    <div style="padding-left:10%; width:100%; display:inherit;">
+                        <div style="width:95%;">{{secondNav[0]}}</div>
+                        <div><i id="iconLittle{{$index}}" class="fas fa-angle-right extend-icon"></i></div>
+                    </div>
+                </a>
+                <div *ngFor="let thirdNav of secondNav[1]; let k = index">
+                    <a mat-list-item style="height: 50%; display:none;" id="myTeamThird{{i}}-{{j}}-{{k}}" routerLink="." (click)="myTeamClick($event)">
+                        <div style="padding-left:20%; width:100%; display:inherit;">
+                            <div style="width:95%;">{{thirdNav}}</div>
+                        </div>
+                    </a>
+                </div>
             </div>
-        </a>
-        <a mat-list-item style="height: 50%; display:none;" id="myTeam1" name="group" routerLink="." *ngFor="let nav of fillerNav4" (click)="myTeamClick($event)">
-            <div style="padding-left:10%; width:100%; display:inherit;">
-                <div style="width:95%;">{{nav}}</div>
-                <div><i id="icon2" class="fas fa-angle-right extend-icon"></i></div>
-            </div>
-        </a>
+        </div>
     </mat-nav-list>
 </div>
 <div class="sidenav-contents">
